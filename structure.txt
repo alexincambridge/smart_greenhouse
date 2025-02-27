@@ -1,0 +1,36 @@
+smart_greenhouse/
+│── app/                          # Main Flask application
+│   ├── static/                    # Static files (CSS, JS, Images)
+│   ├── templates/                 # HTML templates for the web UI
+│   ├── routes/                    # Flask route handlers
+│   │   ├── __init__.py             # Initializes routes as a module
+│   │   ├── dashboard.py            # Main dashboard UI routes
+│   │   ├── alerts.py               # Routes for alerts & notifications
+│   │   ├── images.py               # Image capture & display routes
+│   │   ├── api.py                  # API endpoints for ML, alerts, etc.
+│   │   ├── feedback.py              # Routes for user feedback
+│   │   ├── auth.py                  # User authentication (if needed)
+│   ├── models/                     # Database models
+│   │   ├── __init__.py              # Initialize models as a module
+│   │   ├── image.py                 # Model for storing image data
+│   │   ├── feedback.py              # Model for storing user feedback
+│   ├── services/                   # Business logic and ML inference
+│   │   ├── __init__.py              # Initialize services
+│   │   ├── camera.py                # Handles camera capture
+│   │   ├── ml_model.py              # Loads & runs ML model for pest detection
+│   │   ├── alerts.py                # Sends early alerts (SMS, Email)
+│   │   ├── feedback.py              # Processes user feedback
+│   │   ├── database.py              # Handles DB operations
+│   ├── config.py                    # Application configuration settings
+│   ├── app.py                        # Main Flask application entry point
+│── data/                            # Data storage (Images, Logs, Model)
+│   ├── images/                      # Captured images
+│   ├── logs/                        # System logs
+│   ├── models/                      # Machine learning models
+│── migrations/                      # Database migrations (Flask-Migrate)
+│── tests/                           # Unit and integration tests
+│── docs/                            # Documentation, API references, setup guide
+│── requirements.txt                  # Python dependencies
+│── .env                              # Environment variables (API keys, DB config)
+│── run.py                            # Run the Flask application
+│── README.md                         # Project overview and instructions

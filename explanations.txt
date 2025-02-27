@@ -1,0 +1,36 @@
+1️⃣ app/ (Main Flask Application)
+routes/ → Handles Flask routes (Dashboard, Alerts, API, etc.).
+models/ → Defines database models for storing images, alerts, feedback.
+services/ → Handles camera, ML inference, alerts, and database operations.
+config.py → Configures database, API keys, Flask settings.
+app.py → Main Flask app entry point.
+2️⃣ data/ (Storage for Images, Models, Logs)
+images/ → Stores crop images for ML analysis.
+logs/ → Stores application logs.
+models/ → Stores trained ML models.
+3️⃣ migrations/ (For Database Schema Changes)
+Stores Flask-Migrate files to handle database schema updates.
+4️⃣ tests/ (Unit & Integration Testing)
+Contains test cases to ensure reliability of ML, Flask routes, and alerts.
+5️⃣ docs/ (Documentation)
+API references, Setup Guide, ML model training notes, etc.
+6️⃣ requirements.txt
+Lists Python dependencies (Flask, OpenCV, TensorFlow, Twilio, etc.).
+7️⃣ .env
+Stores API keys, database credentials, and secret keys (excluded from Git).
+8️⃣ run.py
+The script to start the Flask server.
+
+next step
+✅ Set up Flask (pip install flask flask-sqlalchemy flask-migrate).
+✅ Integrate Raspberry Pi Camera using camera.py.
+✅ Develop ML model for pest detection (ml_model.py).
+✅ Implement Alert System (alerts.py) (SMS, Email via Twilio).
+✅ Deploy the system on Raspberry Pi.
+
+
+
+Run Flask API
+python app.py
+🔹 Send API Request
+curl -X POST http://localhost:5000/detect
